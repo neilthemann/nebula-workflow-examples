@@ -19,7 +19,7 @@ contributing your own Nebula step image, head over to our
 To find out more about Nebula workflows and steps, see [Using
 workflows](https://puppet.com/docs/nebula/beta/using-workflows.html).
 
-## Getting Started
+## Getting started
 
 1. Fork this repository on GitHub. If you don't have a GitHub account, you can
    sign up for free on the [GitHub](https://github.com/join) website.
@@ -59,15 +59,35 @@ Your workflow file should:
 
 For example, `provision-aws-cluster-with-terraform.yaml`
 
-#### `metadata.json` guidelines
+#### Metadata file guidelines
 
-TBD
+Include a `metadata.json` file with the following keys:
+
+|   |   |   |   |
+|---|---|---|---|
+| Key | Description | Example | Required |
+| `name` | The full name of your workflow. | `gke-provision-and-deploy-workflow` | True |
+| `version` | The current version of your workflow. This must follow semantic versioning. For details, see the [Semantic Versioning](https://semver.org/spec/v1.0.0.html) specification. | `1.0.0` | True |
+| `author` | The person or organization who receives credit for creating the workflow. | `puppet` | True |
+| `summary` | A one-line description of your workflow. | `This workflow deploys a simple Gatsby site to Google Cloud Platform (GCP).` | True |
+| `project_page` | A link to the workflow or tool website. | `gatsbyjs.org` | False | 
+| `description` | A more detailed overview of your workflow. | `The workflow provisions a Google Kubernetes Engine (GKE) cluster on GCP using Terraform, and deploys the app to the cluster.` | True |
+
+For example:
+
+```json
+{
+  "name": "gke-provision-and-deploy-workflow",
+  "version": "1.0.0",
+  "author": "puppet",
+  "summary": "This workflow deploys a simple Gatsby site to Google Cloud Platform (GCP).",
+  "project_page": "gatsbyjs.org",
+  "description": "The workflow provisions a Google Kubernetes Engine (GKE) cluster on GCP using Terraform, and deploys the app to the cluster."
+}
+```
 
 #### README guidelines
 
 Your README file should guide a user through your workflow. Make sure you
-include any prerequisites, such as accounts, and permissions levels. Use
+include any prerequisites, such as required service accounts and permissions levels. Use
 the other READMEs in this repo as a guide.
-
-
-

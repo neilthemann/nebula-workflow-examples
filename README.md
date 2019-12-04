@@ -1,7 +1,6 @@
 # Nebula workflow examples  
 This repository contains example workflows for [Project
-Nebula](https://puppet.com/project-nebula). Feel free to use these workflows to
-get started.
+Nebula](https://puppet.com/project-nebula). Use these workflows to get started.
 
 | Workflow      | Description   |
 | ------------- | ------------- |
