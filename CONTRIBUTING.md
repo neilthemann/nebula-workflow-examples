@@ -54,7 +54,6 @@ and a `README.md` file.
 
 Your workflow file should:
   - Use the same name as the parent directory.
-  - Use the `.yaml` extension.
   - Contain valid YAML and follow the Nebula step conventions explained at .
 
 For example, `provision-aws-cluster-with-terraform.yaml`
