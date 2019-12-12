@@ -9,7 +9,7 @@ Finally, the workflow provides a manual approval before exposing the front end s
 
 Before you run the workflow, make sure you have access to the following:
 - A Slack authentication token. For more information, see [Getting a Slack token](https://get.slack.help/hc/en-us/articles/215770388-Create-and-regenerate-API-tokens). 
-- Azure account and service principal] 
+- Azure account and service principal 
   > For more information on creating a service principal, see [Create an Azure service principal with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest).
 
 ## Run the workflow
