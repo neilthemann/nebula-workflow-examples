@@ -24,8 +24,8 @@ steps:
     templateFile: example-workflows/aks-sock-shop/templates/aks-resourcegroup.json
     git: 
       name: nebula-workflow-examples  
-      branch: aks-sock-shop
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
+      branch: master
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
     parameters:
       rgName: !Parameter resourcegroupname
       rgLocation: !Parameter location
@@ -43,8 +43,8 @@ steps:
     templateFile: example-workflows/aks-sock-shop/templates/aks-cluster.json
     git: 
       name: nebula-workflow-examples  
-      branch: aks-sock-shop
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
+      branch: master
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
     parameters:
       clusterName: nebula-aks
       dnsPrefix: nebula-1352
@@ -91,8 +91,7 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
 
 - name: carts-db-deployment 
   dependsOn: create-namespace
@@ -108,8 +107,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: carts-db-service 
   dependsOn: carts-db-deployment
@@ -125,8 +124,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 
 - name: carts-deployment 
@@ -143,8 +142,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
   
 - name: carts-service
   dependsOn: carts-deployment
@@ -160,8 +159,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: catalogue-db-deployment
   dependsOn: create-namespace 
@@ -177,8 +176,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: catalogue-db-service 
   dependsOn: catalogue-db-deployment
@@ -194,8 +193,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: catalogue-deployment 
   dependsOn: catalogue-db-service
@@ -211,8 +210,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: catalogue-service 
   dependsOn: catalogue-deployment
@@ -228,8 +227,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 
 - name: front-end-deployment
@@ -246,8 +245,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 
 - name: front-end-service
@@ -264,8 +263,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: orders-db-deployment
   dependsOn: create-namespace
@@ -281,8 +280,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
   
 
 - name: orders-db-service
@@ -299,8 +298,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: orders-deployment
   dependsOn: orders-db-service
@@ -316,8 +315,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: orders-service
   dependsOn: orders-deployment
@@ -333,8 +332,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: payment-deployment
   dependsOn: create-namespace
@@ -350,8 +349,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: payment-service
   dependsOn: payment-deployment
@@ -367,8 +366,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: queue-master-deployment
   dependsOn: create-namespace
@@ -384,8 +383,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 
 - name: queue-master-service
@@ -402,8 +401,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: rabbitmq-deployment
   dependsOn: create-namespace
@@ -419,8 +418,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: rabbitmq-service
   dependsOn: rabbitmq-deployment
@@ -436,8 +435,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: session-db-deployment
   dependsOn: create-namespace
@@ -453,8 +452,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: session-db-service
   dependsOn: session-db-deployment
@@ -470,8 +469,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: shipping-deployment
   dependsOn: create-namespace
@@ -487,8 +486,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: shipping-service
   dependsOn: shipping-deployment
@@ -504,8 +503,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: user-db-deployment
   dependsOn: create-namespace
@@ -521,8 +520,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: user-db-service
   dependsOn: user-db-deployment
@@ -538,8 +537,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: user-deployment
   dependsOn: user-db-service
@@ -555,8 +554,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: user-service
   dependsOn: user-deployment
@@ -572,8 +571,8 @@ steps:
       token: !Output [extract-cluster-credentials, k8s_current_access_token]
     git:
       name: nebula-workflow-examples
-      repository: https://github.com/kenazk/nebula-workflow-examples.git
-      branch: aks-sock-shop 
+      repository: https://github.com/puppetlabs/nebula-workflow-examples.git
+      branch: master 
 
 - name: manual-approval
   type: approval
