@@ -51,3 +51,5 @@ Congratulations! You've deployed the Sock Shop demo to AKS.
 
 - For more information on our curated step specifications, see [Step specifications](../step-specifications.md).
 - If your team uses Microsoft teams, try the [Microsoft Teams notification](../step-specifications/msteams-notification.md) step.
+
+<p align="center"><img src="./aks-sock-shop.png"></p>
