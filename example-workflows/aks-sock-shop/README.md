@@ -3,7 +3,7 @@
 This sample workflow deploys the [Weavework's Sock Shop demo](https://microservices-demo.github.io/) to the [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
 The workflow first provisions a Azure Resource Group, then deploys an AKS cluster into the Resource Group. 
 Next, the workflow creates a namespace on top of the AKS cluster and then deploys the Sock Shop demo into it. 
-Finally, the workflow provides a manual approval before exposing the front end service to the internet. 
+Finally, the workflow provides a Slack notification and then outputs the URL of the Sock Shop demo. 
 
 ## Prerequisites
 

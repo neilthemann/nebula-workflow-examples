@@ -574,10 +574,6 @@ steps:
       repository: https://github.com/puppetlabs/nebula-workflow-examples.git
       branch: master 
 
-- name: manual-approval
-  type: approval
-  dependsOn: front-end-service
-
 - name: output-url
   dependsOn: slack-notify
   image: projectnebula/kubectl
@@ -599,7 +595,7 @@ steps:
       
   
 - name: slack-notify
-  dependsOn: manual-approval
+  dependsOn: front-end-service
   image: projectnebula/slack-notification
   spec:
     apitoken: !Secret slacktoken
