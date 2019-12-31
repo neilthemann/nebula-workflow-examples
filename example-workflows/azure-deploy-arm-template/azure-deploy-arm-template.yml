@@ -1,0 +1,20 @@
+version: v1
+description: Azure Resource Test
+
+steps:
+- name: azureresourcemanager-deployer
+  image: projectnebula/azureresourcemanager-deployer:latest
+  spec:
+    azure:
+      tenantID: [Tenant ID]
+      username: [Application (client) ID]
+      cert:
+        $type: Secret
+        name: cert
+    deploymentName: [Deployment name]
+    resourceGroup: [Resource group name]
+    templateFile: templates\[template filename].json
+    git:
+      name: [Folder name for local git clone]
+      branch: master
+      repository: [Repo URL]
