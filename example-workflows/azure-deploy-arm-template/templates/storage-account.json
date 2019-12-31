@@ -5,7 +5,7 @@
       {
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2019-04-01",
-        "name": "unique-stroage-account-name",
+        "name": "unique-name",
         "location": "centralus",
         "sku": {
           "name": "Standard_LRS"
