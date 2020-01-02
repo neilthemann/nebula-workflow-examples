@@ -6,15 +6,17 @@ steps:
   image: projectnebula/azureresourcemanager-deployer:latest
   spec:
     azure:
-      tenantID: [Tenant ID]
-      username: [Application (client) ID]
+      tenantID: !Parameter TenantID
+      username: !Parameter ApplicationID
       cert:
         $type: Secret
         name: cert
-    deploymentName: [Deployment name]
-    resourceGroup: [Resource group name]
-    templateFile: templates\[template filename].json
+    deploymentName: !Parameter DeploymentName
+    resourceGroup: !Parameter ResourceGroupName
+    templateFile: templates\!Parameter templateFilename.json
     git:
-      name: [Folder name for local git clone]
+      name: !Parameter FolderName
       branch: master
-      repository: [Repo URL]
+      repository: !Parameter RepoURL
+    parameters:
+      storageName: !Parameter storageAccountName
