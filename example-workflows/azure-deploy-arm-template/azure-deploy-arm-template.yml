@@ -17,6 +17,8 @@ parameters:
     description: The URL to the git repository that contains the ARM template file
   StorageAccountName:
     description: The name to use for the storage account. This must be unique and only contains lowercase letters and numbers
+  gitBranch:
+    description: The git branch
 steps:
 - name: azureresourcemanager-deployer
   image: projectnebula/azureresourcemanager-deployer:latest
@@ -32,7 +34,7 @@ steps:
     templateFile: templates\!Parameter templateFilename.json
     git:
       name: !Parameter FolderName
-      branch: master
+      branch: !Parameter gitBranch
       repository: !Parameter RepoURL
     parameters:
       storageName: !Parameter StorageAccountName
