@@ -3,20 +3,28 @@ description: Azure Resource Test
 parameters:
   TenantID:
     description: Your Azure Tenant ID
+    default: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ApplicationID:
     description: The Application (Client) ID of your Service Principal
+    default: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   DeploymentName:
     description: The name for this particular deployment
+    default: nebula-deploy
   ResourceGroupName:
     description: The resource group that this deployment will be associated with
+    default: my-resource-group
   templateFilename:
     description: The relative path to the partciular ARM template you want to run within the repository
+    default: path/to/the/template.json
   RepoURL:
     description: The URL to the git repository that contains the ARM template file
+    default: https://github.com/puppetlabs/nebula-workflow-examples/
   StorageAccountName:
     description: The name to use for the storage account. This must be unique and only contains lowercase letters and numbers
+    default: store19850905
   gitBranch:
     description: The git branch
+    default: master
 steps:
 - name: azureresourcemanager-deployer
   image: projectnebula/azureresourcemanager-deployer:latest
