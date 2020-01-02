@@ -1,6 +1,22 @@
 version: v1
 description: Azure Resource Test
-
+parameters:
+  TenantID:
+    description: Your Azure Tenant ID
+  ApplicationID:
+    description: The Application (Client) ID of your Service Principal
+  DeploymentName:
+    description: The name for this particular deployment
+  ResourceGroupName:
+    description: The resource group that this deployment will be associated with
+  templateFilename:
+    description: The filename of the partciular ARM template you want to run
+  FolderName:
+    description: The folder name for the local git clone
+  RepoURL:
+    description: The URL to the git repository that contains the ARM template file
+  StorageAccountName:
+    description: The name to use for the storage account. This must be unique and only contains lowercase letters and numbers
 steps:
 - name: azureresourcemanager-deployer
   image: projectnebula/azureresourcemanager-deployer:latest
@@ -19,4 +35,4 @@ steps:
       branch: master
       repository: !Parameter RepoURL
     parameters:
-      storageName: !Parameter storageAccountName
+      storageName: !Parameter StorageAccountName
