@@ -10,9 +10,7 @@ parameters:
   ResourceGroupName:
     description: The resource group that this deployment will be associated with
   templateFilename:
-    description: The full path to the partciular ARM template you want to run
-  FolderName:
-    description: The folder name for the local git clone
+    description: The relative path to the partciular ARM template you want to run within the repository
   RepoURL:
     description: The URL to the git repository that contains the ARM template file
   StorageAccountName:
@@ -33,7 +31,7 @@ steps:
     resourceGroup: !Parameter ResourceGroupName
     templateFile: !Parameter templateFilename
     git:
-      name: !Parameter FolderName
+      name: repo
       branch: !Parameter gitBranch
       repository: !Parameter RepoURL
     parameters:
