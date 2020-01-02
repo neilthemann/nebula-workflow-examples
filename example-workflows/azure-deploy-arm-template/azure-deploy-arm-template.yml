@@ -21,7 +21,7 @@ parameters:
     default: https://github.com/puppetlabs/nebula-workflow-examples/
   StorageAccountName:
     description: The name to use for the storage account. This must be unique and only contains lowercase letters and numbers
-    default: store19850905
+    default: store19551105
   gitBranch:
     description: The git branch
     default: master
