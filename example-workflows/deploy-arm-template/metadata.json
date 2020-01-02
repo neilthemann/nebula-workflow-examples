@@ -1,0 +1,7 @@
+{
+    "name": "deploy-arm-template",
+    "version": "1.0.0",
+    "author": "neilthemann",
+    "summary": "This workflow deploys resources to Azure.",
+    "description": "This sample workflow deploys resources defined by an Azure Resource Manager template to Azure."
+  }
